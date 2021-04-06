@@ -8,10 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class CustomerDTO {
-   @NotBlank
    private String firstname;
-   @NotBlank
    private String lastname;
-   @NotBlank
    private String customerNumber;
 }

@@ -3,6 +3,8 @@ package com.customer.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,6 +23,7 @@ import com.customer.service.CustomerService;
 @RestController
 @RequestMapping({"/customer"})
 public class CustomerManagementController {
+   private final Logger logger = LoggerFactory.getLogger(this.getClass());
    @Autowired
    private CustomerService customerservice;
    @PostMapping(value = "/", produces = "application/json")
